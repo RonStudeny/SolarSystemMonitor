@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views ="clr-namespace:SolarSystemMonitor"
+             x:Class="SolarSystemMonitor.ShellPage">
+    <Shell.FlyoutHeader>
+        <Frame BackgroundColor="Black">
+            <Label Text="Our Solar System" 
+                   BackgroundColor="Black" TextColor="WhiteSmoke" 
+                   Margin="30" FontSize="Large"/>
+        </Frame>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Our Solar System" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Planets">
+            <views:PlanetPage/>
+        </ShellContent>
+        <ShellContent Title="Other Astronomical Objects">
+            <views:OtherAstroObjects/>
+        </ShellContent>
+        <ShellContent Title="Satelites">
+            <views:StalitesPage/>
+        </ShellContent>
+    </FlyoutItem>
+</Shell>
