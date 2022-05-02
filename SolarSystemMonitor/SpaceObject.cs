@@ -6,7 +6,7 @@ namespace SolarSystemMonitor
 {
     public class SpaceObject
     {
-        public SpaceObject(string name, double mass, double relativeSpeed, double gravitationalFroce, ObjectTypes objectType)
+        public SpaceObject(string name, string mass, double relativeSpeed, double gravitationalFroce, ObjectTypes objectType)
         {
             Name = name;
             Mass = mass;
@@ -16,7 +16,7 @@ namespace SolarSystemMonitor
         }
 
         public string Name { get; set; }
-        public double Mass { get; set; }
+        public string Mass { get; set; }
         public double RelativeSpeed { get; set; }
         public double GravitationalFroce { get; set; }
         public ObjectTypes ObjectType { get; set; }

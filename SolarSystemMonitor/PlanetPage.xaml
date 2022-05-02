@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <Style TargetType="Label" x:Key="PlanetLabel">
                 <Setter Property="FontSize" Value="Title"/>
-                <Setter Property="Padding" Value="30, 10, 30, 10"/>
+                <Setter Property="Padding" Value="25, 5, 25, 5"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -21,7 +21,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" BackgroundColor="AliceBlue">
-                            <Label Text="{Binding Name}" VerticalOptions="Center"/>
+                            <Label Text="{Binding Name}" VerticalOptions="Center" Style="{StaticResource PlanetLabel}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

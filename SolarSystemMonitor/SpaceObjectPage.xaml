@@ -2,11 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SolarSystemMonitor.SpaceObjectPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="InfoLabel">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="Margin" Value="20, 50"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding Name}" x:Name="ObjectName"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="ObjectName" Text="name" Style="{StaticResource InfoLabel}"
+                   FontSize="35" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+            <Label x:Name="ObjectMass" Text="name" Style="{StaticResource InfoLabel}"/>
+            <Label x:Name="ObjectSpeed" Text="name" Style="{StaticResource InfoLabel}"/>
+            <Label x:Name="ObjectGravForce" Text="name" Style="{StaticResource InfoLabel}"/>
+            <Label x:Name="ObjectType" Text="name" Style="{StaticResource InfoLabel}"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
