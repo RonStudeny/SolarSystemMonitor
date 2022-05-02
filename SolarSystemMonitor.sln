@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarSystemMonitor.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarSystemMonitor.iOS", "SolarSystemMonitor.iOS\SolarSystemMonitor.iOS.csproj", "{F7C33686-DC17-44FE-8FF1-267FBB5CAB2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarSystemMonitor", "SolarSystemMonitor\SolarSystemMonitor.csproj", "{125834AA-1423-4994-9566-B0AEFDF8A772}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarSystemMonitor", "SolarSystemMonitor\SolarSystemMonitor.csproj", "{125834AA-1423-4994-9566-B0AEFDF8A772}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
