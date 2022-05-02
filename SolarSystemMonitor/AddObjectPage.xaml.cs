@@ -12,6 +12,9 @@ namespace SolarSystemMonitor
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddObjectPage : ContentPage
     {
+        public delegate void AddedObjectHandler();
+        public static event AddedObjectHandler NewObjectEvent;
+
         List<string> picks = new List<string>();
 
         public AddObjectPage()
@@ -27,9 +30,11 @@ namespace SolarSystemMonitor
             TypePicker.ItemsSource = picks;
         }
 
-        private void AddButton_Clicked(object sender, EventArgs e) // ošetřit
+        private async void AddButton_Clicked(object sender, EventArgs e) // ošetřit
         {
-            OtherAstroObjectsPage.objects.Add(new SpaceObject(NameEntry.Text, MassEntry.Text, Convert.ToDouble(SpeedEntry.Text), 0, (SpaceObject.ObjectTypes)TypePicker.SelectedIndex));
+            OtherAstroObjectsPage.objects.Add(new SpaceObject(NameEntry.Text, MassEntry.Text, Convert.ToDouble(SpeedEntry.Text), 1, (SpaceObject.ObjectTypes)TypePicker.SelectedIndex));
+            NewObjectEvent();
+            await Navigation.PopAsync();
         }
     }
 }

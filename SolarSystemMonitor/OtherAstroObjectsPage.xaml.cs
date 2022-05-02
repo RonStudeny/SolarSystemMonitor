@@ -16,7 +16,7 @@ namespace SolarSystemMonitor
         public OtherAstroObjectsPage()
         {
             InitializeComponent();
-            
+            AddObjectPage.NewObjectEvent += Refresh;
             ObjectListView.ItemsSource = objects;
         }
 
@@ -26,9 +26,11 @@ namespace SolarSystemMonitor
             await Navigation.PushAsync(addObject);
         }
 
-        private void ObjectTapped(object sender, ItemTappedEventArgs e)
+        private void ObjectTapped(object sender, ItemTappedEventArgs e) // view 
         {
 
         }
+        private void Refresh() => ObjectListView.ItemsSource = objects;
+
     }
 }
