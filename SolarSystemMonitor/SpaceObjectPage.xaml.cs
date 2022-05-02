@@ -15,12 +15,16 @@ namespace SolarSystemMonitor
         public SpaceObjectPage(SpaceObject so)
         {
             InitializeComponent();
+            WriteStats(so);
+        }
 
-            ObjectName.Text = so.Name; 
+        public virtual void WriteStats(SpaceObject so)
+        {
+            ObjectName.Text = so.Name;
             ObjectMass.Text = $"Mass: {so.Mass.ToString()} kg";
-            ObjectSpeed.Text = $"Speed relative sun: {so.RelativeSpeed.ToString()} km/s";
+            ObjectSpeed.Text = $"Relative speed: {so.RelativeSpeed.ToString()} km/s";
             ObjectGravForce.Text = $"Gravitational force: {so.GravitationalFroce.ToString()} m/s^2";
-            ObjectType.Text =  $"Category: {so.ObjectType.ToString()}";
+            ObjectType.Text = $"Category: {so.ObjectType.ToString()}";
         }
     }
 }

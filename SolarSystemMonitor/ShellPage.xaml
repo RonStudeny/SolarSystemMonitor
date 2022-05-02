@@ -15,7 +15,7 @@
             <views:PlanetPage/>
         </ShellContent>
         <ShellContent Title="Other Astronomical Objects">
-            <views:OtherAstroObjects/>
+            <views:OtherAstroObjectsPage/>
         </ShellContent>
         <ShellContent Title="Satelites">
             <views:StalitesPage/>

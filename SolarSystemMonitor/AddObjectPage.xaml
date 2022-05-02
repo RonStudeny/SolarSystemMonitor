@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarSystemMonitor.AddObjectPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry" x:Key="ParamStyle">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="Margin" Value="20, 30"/>
+                <Setter Property="PlaceholderColor" Value="DimGray"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="AliceBlue">
+            <Frame BackgroundColor="CadetBlue" Padding="24">
+                <Label Text="Add a space object" HorizontalTextAlignment="Center" TextColor="Black" FontSize="35"/>
+            </Frame>
+            <Entry x:Name="NameEntry" Placeholder="Object Name" Style="{StaticResource ParamStyle}"/>
+            <Entry x:Name="MassEntry" Placeholder="Mass (kg)" Style="{StaticResource ParamStyle}"/>
+            <Entry x:Name="SpeedEntry" Placeholder="Relative Speed (km/s)" Style="{StaticResource ParamStyle}"/>
+            <Picker x:Name="TypePicker" ItemsSource="{Binding picks}" SelectedIndex="3"/>
+            <Button x:Name="AddButton" Text="Add" Clicked="AddButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -16,12 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="OtherAstroObjectsPage.xaml.cs">
-      <DependentUpon>OtherAstroObjectsPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
+    <EmbeddedResource Update="AddObjectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="OtherAstroObjectsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

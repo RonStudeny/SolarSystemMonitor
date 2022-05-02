@@ -6,12 +6,12 @@ namespace SolarSystemMonitor
 {
     public class SpaceObject
     {
-        public SpaceObject(string name, string mass, double relativeSpeed, double gravitationalFroce, ObjectTypes objectType)
+        public SpaceObject(string name, string mass, double relativeSpeed, double gravitationalForce, ObjectTypes objectType)
         {
             Name = name;
             Mass = mass;
             RelativeSpeed = relativeSpeed;
-            GravitationalFroce = gravitationalFroce;
+            GravitationalFroce = gravitationalForce;
             ObjectType = objectType;
         }
 

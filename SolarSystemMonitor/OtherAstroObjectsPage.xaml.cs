@@ -10,11 +10,25 @@ using Xamarin.Forms.Xaml;
 namespace SolarSystemMonitor
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OtherAstroObjects : ContentPage
+    public partial class OtherAstroObjectsPage : ContentPage
     {
-        public OtherAstroObjects()
+        public static List<SpaceObject> objects = new List<SpaceObject>();
+        public OtherAstroObjectsPage()
         {
             InitializeComponent();
+            
+            ObjectListView.ItemsSource = objects;
+        }
+
+        private async void AddObject_Clicked(object sender, EventArgs e)
+        {
+            AddObjectPage addObject = new AddObjectPage();
+            await Navigation.PushAsync(addObject);
+        }
+
+        private void ObjectTapped(object sender, ItemTappedEventArgs e)
+        {
+
         }
     }
 }
